@@ -1,27 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Demon_Blog</title>
+  <icon>https://www.gravatar.com/avatar/46b1ed1d11314994abe34ef4eaed312b</icon>
   
-  <subtitle>��Һã���������</subtitle>
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-02-17T05:17:53.362Z</updated>
+  <updated>2022-02-21T16:31:59.378Z</updated>
   <id>http://example.com/</id>
   
   <author>
     <name>Demon_qw</name>
-    
+    <email>wqw923573@163.com</email>
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我的第一篇文章</title>
+    <link href="http://example.com/2022/02/22/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
+    <id>http://example.com/2022/02/22/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</id>
+    <published>2022-02-21T16:24:27.000Z</published>
+    <updated>2022-02-21T16:31:59.378Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="你今天真好看"><a href="#你今天真好看" class="headerlink" title="你今天真好看"></a>你今天真好看</h2><h2 id="堆栈"><a href="#堆栈" class="headerlink" title="堆栈"></a>堆栈</h2><h3 id="1-1堆栈ADT"><a href="#1-1堆栈ADT" class="headerlink" title="1.1堆栈ADT"></a>1.1堆栈ADT</h3><p><strong>数据：</strong></p><p>​    n个数据的线性序列（a0，a1,……,an-1),其中线性序列的长度上限为maxSize，且0&lt;=n&lt;maxSize。</p><p><strong>运算：</strong></p><p>​    Create（S，maxSize）：建立一个最多能存储maxSize个元素的空堆栈S。</p><p>​    Destroy（S）：释放堆栈所占的存储空间。</p><p>​    IsEmpty（S）：若堆栈为空，则返回TRUE，否则返回FALSE。</p><p>​    IsFull（S）：若堆栈已满，则返回TRUE，否则返回FALSE。</p><p>​    Top（S，X）；获取堆栈S的栈顶元素，通过X返回，若获取成功，则返回TRUE，否则返回FALSE。</p><p>​    Pop（S）: 从堆栈中删除栈顶元素，若删除成功，则返回TRUE，否则返回FALSE。</p><p>​    Clear（S）：清除堆栈S中的全部元素。</p><h3 id="1-2堆栈的顺序表示"><a href="#1-2堆栈的顺序表示" class="headerlink" title="1.2堆栈的顺序表示"></a>1.2堆栈的顺序表示</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;`</span><br><span class="line"></span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line"></span><br><span class="line">#define BOOL <span class="type">int</span>  ***自定义BOOL为<span class="type">int</span>型***</span><br><span class="line"></span><br><span class="line">#define TRUE <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">#define FALSE <span class="number">0</span>;</span><br></pre></td></tr></table></figure><p><em><strong>自定义BOOL为int型</strong></em></p><p><code>typedef int ElemType;</code></p><p><strong>堆栈结构体定义</strong></p><p><code>typedef struct stack&#123;</code></p><p>  <code>int top;</code></p><p>  <code>int maxSize;</code></p><p>  <code>ElemType *element;</code></p><p><code>&#125;Stack;</code></p><p><strong>建立一个最多能存储maxSize个元素的空堆栈S</strong></p><p><code>void Create(Stack *S, int mSize)&#123;</code></p><p>  <code>S-&gt;maxSize=mSize;</code></p><p>  <code>S-&gt;element=(ElemType*)malloc(sizeof(ElemType)*mSize);</code></p><p>  <code>S-&gt;top=-1;</code></p><p><code>&#125;</code></p><p><strong>释放堆栈所占的存储空间</strong></p><p><code>void Destroy(Stack *S)&#123;</code></p><p>  <code>S-&gt;maxSize=0;</code></p><p>  <code>free(S-&gt;element);</code></p><p>  <code>S-&gt;top=-1;</code></p><p><code>&#125;</code></p><p><strong>若堆栈为空，则返回TRUE，否则返回FALSE</strong></p><p><code>BOOL IsEmtpy(Stack *S)&#123;</code></p><p>  <code>return S-&gt;top==-1;</code></p><p><code>&#125;</code></p><p><strong>若堆栈已满，则返回TRUE，否则返回FALSE</strong></p><p><code>BOOL IsFull(Stack *S)&#123;</code></p><p>  <code>return S-&gt;top==S-&gt;maxSize-1;</code></p><p><code>&#125;</code></p><p><strong>获取堆栈S的栈顶元素，通过X返回，若获取成功，则返回TRUE，否则返回FALSE</strong></p><p><code>BOOL Top(Stack *S,ElemType *X)&#123;</code></p><p>  <code>if(IsEmtpy(S))</code></p><p>​    <code>return FALSE;</code></p><p>  <code>*X=S-&gt;element[S-&gt;top];</code></p><p>  <code>return TRUE;</code></p><p><code>&#125;</code></p><p><strong>在栈顶位置插入元素X，若插入成功，则返回TRUE，否则返回FALSE</strong></p><p><code>BOOL Push(Stack *S,ElemType X)&#123;</code></p><p>  <code>if(IsFull(S))</code></p><p>​    <code>return FALSE;</code></p><p>  <code>S-&gt;top++;</code></p><p>  <code>S-&gt;element[S-&gt;top]=X;</code></p><p>  <code>return TRUE;</code></p><p><code>&#125;</code></p><p><strong>从堆栈中删除栈顶元素，若删除成功，则返回TRUE，否则返回FALSE</strong></p><p><code>BOOL Pop(Stack *S)&#123;</code></p><p>  <code>if(IsEmtpy(S))</code></p><p>​    <code>return FALSE;</code></p><p>  <code>S-&gt;top--;</code></p><p>  <code>return TRUE;</code></p><p><code>&#125;</code></p><p><strong>清除堆栈S中的全部元素</strong></p><p><code>void Clear(Stack *S)&#123;</code></p><p>  <code>S-&gt;top=-1;</code></p><p><code>&#125;</code></p><p><strong>主函数测试</strong></p><p><code>void main()</code></p><p><code>&#123;</code></p><p>  <code>int i;</code></p><p>  <code>Stack S;</code></p><p>  <code>Create(&amp;S, 10);</code>//创建一个大小为10的堆栈</p><p>  <code>for (i = 0; i &lt; 10; i++)</code></p><p>  <code>&#123;</code></p><p>​    <code>Push(&amp;S, i + 100);</code>//依次赋值100~109</p><p>  <code>&#125;</code></p><p>  <code>int number;</code>//接受栈顶的数据</p><p>  <code>Top(&amp;S, &amp;number);</code></p><p>  <code>printf(&quot;栈顶的数据为：%d &quot;, number);</code> </p><p>  <code>Destroy(&amp;S);</code></p><p><code>&#125;</code></p><p><strong>测试结果：</strong></p><p>​    栈顶的数据为：<strong>109</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;你今天真好看&quot;&gt;&lt;a href=&quot;#你今天真好看&quot; class=&quot;headerlink&quot; title=&quot;你今天真好看&quot;&gt;&lt;/a&gt;你今天真好看&lt;/h2&gt;&lt;h2 id=&quot;堆栈&quot;&gt;&lt;a href=&quot;#堆栈&quot; class=&quot;headerlink&quot; title=&quot;堆栈&quot;&gt;&lt;</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
     <link href="http://example.com/2022/02/17/hello-world/"/>
     <id>http://example.com/2022/02/17/hello-world/</id>
     <published>2022-02-17T05:43:05.685Z</published>
-    <updated>2022-02-17T05:17:53.362Z</updated>
+    <updated>2022-02-21T16:29:34.983Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
     
