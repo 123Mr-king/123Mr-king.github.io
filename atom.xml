@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Demon_Blog</title>
+  <title>Echo_Blog</title>
   <icon>https://www.gravatar.com/avatar/46b1ed1d11314994abe34ef4eaed312b</icon>
   
   <link href="http://example.com/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>http://example.com/</id>
   
   <author>
-    <name>Demon_qw</name>
+    <name>Echo_qw</name>
     <email>wqw923573@163.com</email>
   </author>
   
