@@ -1,0 +1,231 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>wireshark简介及安装教程 | Echo_Blog</title><meta name="keywords" content="wireshark,安装教程"><meta name="author" content="Echo_qw,wqw923573@163.com"><meta name="copyright" content="Echo_qw"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="wireshark简介及安装教程1.简史 1997年末，Ethereal（Wireshark项目的最初名称）开始编写 2006年，Wireshark在一个新的项目中出现了：Wireshark。 2008年，经过十年的开发，Wireshark终于发布了1.0版本。这个版本是第一个被认为是完整的版本，其中最基本的功能被简化了。它的发布恰逢第一次Wireshark开发者和用户大会Sharkfest。 2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="wireshark简介及安装教程">
+<meta property="og:url" content="http://example.com/2022/03/08/2022-3%E6%96%87%E7%AB%A0/wireshark%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:site_name" content="Echo_Blog">
+<meta property="og:description" content="wireshark简介及安装教程1.简史 1997年末，Ethereal（Wireshark项目的最初名称）开始编写 2006年，Wireshark在一个新的项目中出现了：Wireshark。 2008年，经过十年的开发，Wireshark终于发布了1.0版本。这个版本是第一个被认为是完整的版本，其中最基本的功能被简化了。它的发布恰逢第一次Wireshark开发者和用户大会Sharkfest。 2">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2022/03/08/bcdtIg.jpg">
+<meta property="article:published_time" content="2022-03-07T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-03-08T04:04:24.071Z">
+<meta property="article:author" content="Echo_qw">
+<meta property="article:tag" content="wireshark">
+<meta property="article:tag" content="安装教程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2022/03/08/bcdtIg.jpg"><link rel="shortcut icon" href="/img/favicon.jpg"><link rel="canonical" href="http://example.com/2022/03/08/2022-3%E6%96%87%E7%AB%A0/wireshark%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'wireshark简介及安装教程',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-03-08 12:04:24'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><link rel="stylesheet" href="APlayer.min.css"><div id="aplayer"></div><script src="https://cdn.jsdelivr.net/gh/radium-bit/res@master/live2d/autoload.js" async></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js" async></script><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.1"><link rel="alternate" href="/atom.xml" title="Echo_Blog" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/./img/toux.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 详情</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-icons"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 有关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s1.ax1x.com/2022/03/08/bcdtIg.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Echo_Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 详情</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-icons"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 有关于我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">wireshark简介及安装教程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-03-07T16:00:00.000Z" title="发表于 2022-03-08 00:00:00">2022-03-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-03-08T04:04:24.071Z" title="更新于 2022-03-08 12:04:24">2022-03-08</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">583</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="wireshark简介及安装教程"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="wireshark简介及安装教程"><a href="#wireshark简介及安装教程" class="headerlink" title="wireshark简介及安装教程"></a>wireshark简介及安装教程</h1><h2 id="1-简史"><a href="#1-简史" class="headerlink" title="1.简史"></a>1.简史</h2><ul>
+<li>1997年末，Ethereal（Wireshark项目的最初名称）开始编写</li>
+<li>2006年，Wireshark在一个新的项目中出现了：Wireshark。</li>
+<li>2008年，经过十年的开发，Wireshark终于发布了1.0版本。这个版本是第一个被认为是完整的版本，其中最基本的功能被简化了。它的发布恰逢第一次Wireshark开发者和用户大会Sharkfest。</li>
+<li>2015年发布了Wireshark 2.0，它采用了新的用户界面。</li>
+</ul>
+<h2 id="2-是什么"><a href="#2-是什么" class="headerlink" title="2.是什么"></a>2.是什么</h2><ul>
+<li>wireshark是一种开源的免费的网络数据包分析器，能够尽可能的详细的呈现捕获的包数据</li>
+<li>你可以把网络数据包分析器看作是一种测量设备，用来检测网络电缆内发生的事情，就像电工用伏特计来检查电缆内部的情况一样</li>
+</ul>
+<h2 id="3-使用场景"><a href="#3-使用场景" class="headerlink" title="3.使用场景"></a>3.使用场景</h2><ul>
+<li>网络管理员会使用wireshark来检查网络问题</li>
+<li>软件测试工程师使用wireshark抓包，来分析自己测试的软件</li>
+<li>从事socket编程的工程师会用wireshark来调试</li>
+<li>听说，华为，中兴的大部分工程师都会用到wireshark</li>
+<li>总之跟网络相关的东西，都可能会用到wireshark</li>
+</ul>
+<h2 id="4-安装"><a href="#4-安装" class="headerlink" title="4.安装"></a>4.安装</h2><p>1.下载wireshark （下载后不建议安装在c盘）</p>
+<p>（1）下载地址地址：<a target="_blank" rel="noopener" href="https://www.wireshark.org/">https://www.wireshark.org/</a></p>
+<p>（2）或者浏览器搜索wireshark 的官方主页</p>
+<h4 id="2-下载Wireshark后，进行安装。"><a href="#2-下载Wireshark后，进行安装。" class="headerlink" title="2.下载Wireshark后，进行安装。"></a>2.下载Wireshark后，进行安装。</h4><h5 id="1-开始安装，直接点Next"><a href="#1-开始安装，直接点Next" class="headerlink" title="1.开始安装，直接点Next"></a>1.开始安装，直接点Next</h5><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bcdyZT"><img src="https://s1.ax1x.com/2022/03/08/bcdyZT.jpg" alt="bcdyZT.jpg"></a></p>
+<h5 id="2-不用说肯定是I-Agree，不点？安装不了。"><a href="#2-不用说肯定是I-Agree，不点？安装不了。" class="headerlink" title="2.不用说肯定是I Agree，不点？安装不了。"></a>2.不用说肯定是I Agree，不点？安装不了。</h5><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bcdcoF"><img src="https://s1.ax1x.com/2022/03/08/bcdcoF.jpg" alt="bcdcoF.jpg"></a></p>
+<h5 id="3-安装选项，这里默认就好了"><a href="#3-安装选项，这里默认就好了" class="headerlink" title="3.安装选项，这里默认就好了"></a>3.安装选项，这里默认就好了</h5><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bcd4Q1"><img src="https://s1.ax1x.com/2022/03/08/bcd4Q1.jpg" alt="bcd4Q1.jpg"></a></p>
+<!-- ![](https://s1.ax1x.com/2022/03/08/bcd4Q1.jpg) -->
+
+<h5 id="4-附加任务，"><a href="#4-附加任务，" class="headerlink" title="4.附加任务，"></a>4.附加任务，</h5><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bcdIL6"><img src="https://s1.ax1x.com/2022/03/08/bcdIL6.jpg" alt="bcdIL6.jpg"></a></p>
+<h5 id="5-安装位置，强烈建议除C盘以外的盘，这里我就放在平时学习的软件里。"><a href="#5-安装位置，强烈建议除C盘以外的盘，这里我就放在平时学习的软件里。" class="headerlink" title="5.安装位置，强烈建议除C盘以外的盘，这里我就放在平时学习的软件里。"></a>5.安装位置，强烈建议除C盘以外的盘，这里我就放在平时学习的软件里。</h5><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bcd7dO"><img src="https://s1.ax1x.com/2022/03/08/bcd7dO.jpg" alt="bcd7dO.jpg"></a></p>
+<h5 id="6-这里需要注意一下，必须安装WinPcap，才能捕获数据包"><a href="#6-这里需要注意一下，必须安装WinPcap，才能捕获数据包" class="headerlink" title="6.这里需要注意一下，必须安装WinPcap，才能捕获数据包"></a>6.这里需要注意一下，必须安装WinPcap，才能捕获数据包</h5><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bcw4hQ"><img src="https://s1.ax1x.com/2022/03/08/bcw4hQ.jpg" alt="bcw4hQ.jpg"></a></p>
+<h5 id="7-USBPcap（-用Wireshark捕获USB数据，可以先不勾选、不进行安装，后续有需要可以再安装）"><a href="#7-USBPcap（-用Wireshark捕获USB数据，可以先不勾选、不进行安装，后续有需要可以再安装）" class="headerlink" title="7.USBPcap（ 用Wireshark捕获USB数据，可以先不勾选、不进行安装，后续有需要可以再安装）"></a>7.USBPcap（ 用Wireshark捕获USB数据，可以先不勾选、不进行安装，后续有需要可以再安装）</h5><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bcwqBV"><img src="https://s1.ax1x.com/2022/03/08/bcwqBV.jpg" alt="bcwqBV.jpg"></a></p>
+<h5 id="8-开始安装"><a href="#8-开始安装" class="headerlink" title="8.开始安装"></a>8.开始安装</h5><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bcwbn0"><img src="https://s1.ax1x.com/2022/03/08/bcwbn0.jpg" alt="bcwbn0.jpg"></a></p>
+<h5 id="9-安装WinPcap"><a href="#9-安装WinPcap" class="headerlink" title="9.安装WinPcap"></a>9.安装WinPcap</h5><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bcwL7T"><img src="https://s1.ax1x.com/2022/03/08/bcwL7T.jpg" alt="bcwL7T.jpg"></a></p>
+<h5 id="10-直接默认安装，不要取消打勾"><a href="#10-直接默认安装，不要取消打勾" class="headerlink" title="10.直接默认安装，不要取消打勾"></a>10.直接默认安装，不要取消打勾</h5><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bcw7Xq"><img src="https://s1.ax1x.com/2022/03/08/bcw7Xq.jpg" alt="bcw7Xq.jpg"></a></p>
+<h5 id="11-等待安装完后，点击Finish"><a href="#11-等待安装完后，点击Finish" class="headerlink" title="11.等待安装完后，点击Finish"></a>11.等待安装完后，点击Finish</h5><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bcwTcn"><img src="https://s1.ax1x.com/2022/03/08/bcwTcn.jpg" alt="bcwTcn.jpg"></a><br><a target="_blank" rel="noopener" href="https://imgtu.com/i/bcwXAU"><img src="https://s1.ax1x.com/2022/03/08/bcwXAU.jpg" alt="bcwXAU.jpg"></a></p>
+<h5 id="12-这里注意一下："><a href="#12-这里注意一下：" class="headerlink" title="12.这里注意一下："></a>12.这里注意一下：</h5><p>Reboot now 是：现在重新启动电脑</p>
+<p>I want to manually reboot later 是:我想以后手动重新启动，现不会重启电脑</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bcwjNF"><img src="https://s1.ax1x.com/2022/03/08/bcwjNF.jpg" alt="bcwjNF.jpg"></a></p>
+<p>安装完毕！</p>
+<p>这时候可以在右下角搜索栏 wireshark 查看是否真正安装完毕！</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:wqw923573@163.com">Echo_qw</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2022/03/08/2022-3%E6%96%87%E7%AB%A0/wireshark%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">http://example.com/2022/03/08/2022-3%E6%96%87%E7%AB%A0/wireshark%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Echo_Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/wireshark/">wireshark</a><a class="post-meta__tags" href="/tags/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">安装教程</a></div><div class="post_share"><div class="social-share" data-image="https://s1.ax1x.com/2022/03/08/bcdtIg.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/03/07/2022-3%E6%96%87%E7%AB%A0/%E5%AF%B9%E6%95%B0%E5%99%A8/"><img class="next-cover" src="https://s1.ax1x.com/2022/03/07/byCtAI.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">对数器</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81NTY1OC8zMjEyNQ=="></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/./img/toux.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Echo_qw</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/123Mr-king/" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:wqw923573@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://github.com/123Mr-king/" target="_blank" title="WeiXin"><i class="fab fa-weixin"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#wireshark%E7%AE%80%E4%BB%8B%E5%8F%8A%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">wireshark简介及安装教程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%AE%80%E5%8F%B2"><span class="toc-number">1.1.</span> <span class="toc-text">1.简史</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">1.2.</span> <span class="toc-text">2.是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">1.3.</span> <span class="toc-text">3.使用场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%AE%89%E8%A3%85"><span class="toc-number">1.4.</span> <span class="toc-text">4.安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E4%B8%8B%E8%BD%BDWireshark%E5%90%8E%EF%BC%8C%E8%BF%9B%E8%A1%8C%E5%AE%89%E8%A3%85%E3%80%82"><span class="toc-number">1.4.0.1.</span> <span class="toc-text">2.下载Wireshark后，进行安装。</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85%EF%BC%8C%E7%9B%B4%E6%8E%A5%E7%82%B9Next"><span class="toc-number">1.4.0.1.1.</span> <span class="toc-text">1.开始安装，直接点Next</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E4%B8%8D%E7%94%A8%E8%AF%B4%E8%82%AF%E5%AE%9A%E6%98%AFI-Agree%EF%BC%8C%E4%B8%8D%E7%82%B9%EF%BC%9F%E5%AE%89%E8%A3%85%E4%B8%8D%E4%BA%86%E3%80%82"><span class="toc-number">1.4.0.1.2.</span> <span class="toc-text">2.不用说肯定是I Agree，不点？安装不了。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E5%AE%89%E8%A3%85%E9%80%89%E9%A1%B9%EF%BC%8C%E8%BF%99%E9%87%8C%E9%BB%98%E8%AE%A4%E5%B0%B1%E5%A5%BD%E4%BA%86"><span class="toc-number">1.4.0.1.3.</span> <span class="toc-text">3.安装选项，这里默认就好了</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E9%99%84%E5%8A%A0%E4%BB%BB%E5%8A%A1%EF%BC%8C"><span class="toc-number">1.4.0.1.4.</span> <span class="toc-text">4.附加任务，</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE%EF%BC%8C%E5%BC%BA%E7%83%88%E5%BB%BA%E8%AE%AE%E9%99%A4C%E7%9B%98%E4%BB%A5%E5%A4%96%E7%9A%84%E7%9B%98%EF%BC%8C%E8%BF%99%E9%87%8C%E6%88%91%E5%B0%B1%E6%94%BE%E5%9C%A8%E5%B9%B3%E6%97%B6%E5%AD%A6%E4%B9%A0%E7%9A%84%E8%BD%AF%E4%BB%B6%E9%87%8C%E3%80%82"><span class="toc-number">1.4.0.1.5.</span> <span class="toc-text">5.安装位置，强烈建议除C盘以外的盘，这里我就放在平时学习的软件里。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-%E8%BF%99%E9%87%8C%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E4%B8%80%E4%B8%8B%EF%BC%8C%E5%BF%85%E9%A1%BB%E5%AE%89%E8%A3%85WinPcap%EF%BC%8C%E6%89%8D%E8%83%BD%E6%8D%95%E8%8E%B7%E6%95%B0%E6%8D%AE%E5%8C%85"><span class="toc-number">1.4.0.1.6.</span> <span class="toc-text">6.这里需要注意一下，必须安装WinPcap，才能捕获数据包</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-USBPcap%EF%BC%88-%E7%94%A8Wireshark%E6%8D%95%E8%8E%B7USB%E6%95%B0%E6%8D%AE%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%85%88%E4%B8%8D%E5%8B%BE%E9%80%89%E3%80%81%E4%B8%8D%E8%BF%9B%E8%A1%8C%E5%AE%89%E8%A3%85%EF%BC%8C%E5%90%8E%E7%BB%AD%E6%9C%89%E9%9C%80%E8%A6%81%E5%8F%AF%E4%BB%A5%E5%86%8D%E5%AE%89%E8%A3%85%EF%BC%89"><span class="toc-number">1.4.0.1.7.</span> <span class="toc-text">7.USBPcap（ 用Wireshark捕获USB数据，可以先不勾选、不进行安装，后续有需要可以再安装）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85"><span class="toc-number">1.4.0.1.8.</span> <span class="toc-text">8.开始安装</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-%E5%AE%89%E8%A3%85WinPcap"><span class="toc-number">1.4.0.1.9.</span> <span class="toc-text">9.安装WinPcap</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#10-%E7%9B%B4%E6%8E%A5%E9%BB%98%E8%AE%A4%E5%AE%89%E8%A3%85%EF%BC%8C%E4%B8%8D%E8%A6%81%E5%8F%96%E6%B6%88%E6%89%93%E5%8B%BE"><span class="toc-number">1.4.0.1.10.</span> <span class="toc-text">10.直接默认安装，不要取消打勾</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#11-%E7%AD%89%E5%BE%85%E5%AE%89%E8%A3%85%E5%AE%8C%E5%90%8E%EF%BC%8C%E7%82%B9%E5%87%BBFinish"><span class="toc-number">1.4.0.1.11.</span> <span class="toc-text">11.等待安装完后，点击Finish</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#12-%E8%BF%99%E9%87%8C%E6%B3%A8%E6%84%8F%E4%B8%80%E4%B8%8B%EF%BC%9A"><span class="toc-number">1.4.0.1.12.</span> <span class="toc-text">12.这里注意一下：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/03/08/2022-3%E6%96%87%E7%AB%A0/wireshark%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" title="wireshark简介及安装教程"><img src="https://s1.ax1x.com/2022/03/08/bcdtIg.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="wireshark简介及安装教程"/></a><div class="content"><a class="title" href="/2022/03/08/2022-3%E6%96%87%E7%AB%A0/wireshark%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" title="wireshark简介及安装教程">wireshark简介及安装教程</a><time datetime="2022-03-07T16:00:00.000Z" title="发表于 2022-03-08 00:00:00">2022-03-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/07/2022-3%E6%96%87%E7%AB%A0/%E5%AF%B9%E6%95%B0%E5%99%A8/" title="对数器"><img src="https://s1.ax1x.com/2022/03/07/byCtAI.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="对数器"/></a><div class="content"><a class="title" href="/2022/03/07/2022-3%E6%96%87%E7%AB%A0/%E5%AF%B9%E6%95%B0%E5%99%A8/" title="对数器">对数器</a><time datetime="2022-03-06T16:00:00.000Z" title="发表于 2022-03-07 00:00:00">2022-03-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/06/2022-3%E6%96%87%E7%AB%A0/%E5%8F%8C%E7%AB%AF%E9%93%BE%E8%A1%A8/" title="双端链表"><img src="https://s1.ax1x.com/2022/03/07/byCSkq.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="双端链表"/></a><div class="content"><a class="title" href="/2022/03/06/2022-3%E6%96%87%E7%AB%A0/%E5%8F%8C%E7%AB%AF%E9%93%BE%E8%A1%A8/" title="双端链表">双端链表</a><time datetime="2022-03-05T16:00:00.000Z" title="发表于 2022-03-06 00:00:00">2022-03-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/24/2022-3%E6%96%87%E7%AB%A0/Python%E7%88%AC%E8%99%AB%E7%88%AC%E5%8F%96%E8%B1%86%E7%93%A3%E7%94%B5%E5%BD%B1top25/" title="Python爬虫爬取豆瓣电影top25"><img src="/./img/%E9%9D%A2%E5%85%B7%E7%94%B7%E5%AD%A9.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python爬虫爬取豆瓣电影top25"/></a><div class="content"><a class="title" href="/2022/02/24/2022-3%E6%96%87%E7%AB%A0/Python%E7%88%AC%E8%99%AB%E7%88%AC%E5%8F%96%E8%B1%86%E7%93%A3%E7%94%B5%E5%BD%B1top25/" title="Python爬虫爬取豆瓣电影top25">Python爬虫爬取豆瓣电影top25</a><time datetime="2022-02-23T16:00:00.000Z" title="发表于 2022-02-24 00:00:00">2022-02-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/23/2022-3%E6%96%87%E7%AB%A0/%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8/" title="线性表的顺序存储"><img src="/./img/%E5%88%97%E8%BD%A6%E9%93%81%E8%BD%A8.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="线性表的顺序存储"/></a><div class="content"><a class="title" href="/2022/02/23/2022-3%E6%96%87%E7%AB%A0/%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8/" title="线性表的顺序存储">线性表的顺序存储</a><time datetime="2022-02-22T16:00:00.000Z" title="发表于 2022-02-23 00:00:00">2022-02-23</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://s1.ax1x.com/2022/03/08/bcdtIg.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Echo_qw</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Livere' === 'Livere' || !false) {
+  if (false) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-03-07T07:21:07.862Z</updated>
+  <updated>2022-03-08T04:04:24.071Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>wireshark简介及安装教程</title>
+    <link href="http://example.com/2022/03/08/2022-3%E6%96%87%E7%AB%A0/wireshark%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+    <id>http://example.com/2022/03/08/2022-3%E6%96%87%E7%AB%A0/wireshark%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</id>
+    <published>2022-03-07T16:00:00.000Z</published>
+    <updated>2022-03-08T04:04:24.071Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="wireshark简介及安装教程"><a href="#wireshark简介及安装教程" class="headerlink" title="wireshark简介及安装教程"></a>wireshark简介及安装教程</h1><h2 id="1-简史"><a href="#1-简史" class="headerlink" title="1.简史"></a>1.简史</h2><ul><li>1997年末，Ethereal（Wireshark项目的最初名称）开始编写</li><li>2006年，Wireshark在一个新的项目中出现了：Wireshark。</li><li>2008年，经过十年的开发，Wireshark终于发布了1.0版本。这个版本是第一个被认为是完整的版本，其中最基本的功能被简化了。它的发布恰逢第一次Wireshark开发者和用户大会Sharkfest。</li><li>2015年发布了Wireshark 2.0，它采用了新的用户界面。</li></ul><h2 id="2-是什么"><a href="#2-是什么" class="headerlink" title="2.是什么"></a>2.是什么</h2><ul><li>wireshark是一种开源的免费的网络数据包分析器，能够尽可能的详细的呈现捕获的包数据</li><li>你可以把网络数据包分析器看作是一种测量设备，用来检测网络电缆内发生的事情，就像电工用伏特计来检查电缆内部的情况一样</li></ul><h2 id="3-使用场景"><a href="#3-使用场景" class="headerlink" title="3.使用场景"></a>3.使用场景</h2><ul><li>网络管理员会使用wireshark来检查网络问题</li><li>软件测试工程师使用wireshark抓包，来分析自己测试的软件</li><li>从事socket编程的工程师会用wireshark来调试</li><li>听说，华为，中兴的大部分工程师都会用到wireshark</li><li>总之跟网络相关的东西，都可能会用到wireshark</li></ul><h2 id="4-安装"><a href="#4-安装" class="headerlink" title="4.安装"></a>4.安装</h2><p>1.下载wireshark （下载后不建议安装在c盘）</p><p>（1）下载地址地址：<a href="https://www.wireshark.org/">https://www.wireshark.org/</a></p><p>（2）或者浏览器搜索wireshark 的官方主页</p><h4 id="2-下载Wireshark后，进行安装。"><a href="#2-下载Wireshark后，进行安装。" class="headerlink" title="2.下载Wireshark后，进行安装。"></a>2.下载Wireshark后，进行安装。</h4><h5 id="1-开始安装，直接点Next"><a href="#1-开始安装，直接点Next" class="headerlink" title="1.开始安装，直接点Next"></a>1.开始安装，直接点Next</h5><p><a href="https://imgtu.com/i/bcdyZT"><img src="https://s1.ax1x.com/2022/03/08/bcdyZT.jpg" alt="bcdyZT.jpg"></a></p><h5 id="2-不用说肯定是I-Agree，不点？安装不了。"><a href="#2-不用说肯定是I-Agree，不点？安装不了。" class="headerlink" title="2.不用说肯定是I Agree，不点？安装不了。"></a>2.不用说肯定是I Agree，不点？安装不了。</h5><p><a href="https://imgtu.com/i/bcdcoF"><img src="https://s1.ax1x.com/2022/03/08/bcdcoF.jpg" alt="bcdcoF.jpg"></a></p><h5 id="3-安装选项，这里默认就好了"><a href="#3-安装选项，这里默认就好了" class="headerlink" title="3.安装选项，这里默认就好了"></a>3.安装选项，这里默认就好了</h5><p><a href="https://imgtu.com/i/bcd4Q1"><img src="https://s1.ax1x.com/2022/03/08/bcd4Q1.jpg" alt="bcd4Q1.jpg"></a></p><!-- ![](https://s1.ax1x.com/2022/03/08/bcd4Q1.jpg) --><h5 id="4-附加任务，"><a href="#4-附加任务，" class="headerlink" title="4.附加任务，"></a>4.附加任务，</h5><p><a href="https://imgtu.com/i/bcdIL6"><img src="https://s1.ax1x.com/2022/03/08/bcdIL6.jpg" alt="bcdIL6.jpg"></a></p><h5 id="5-安装位置，强烈建议除C盘以外的盘，这里我就放在平时学习的软件里。"><a href="#5-安装位置，强烈建议除C盘以外的盘，这里我就放在平时学习的软件里。" class="headerlink" title="5.安装位置，强烈建议除C盘以外的盘，这里我就放在平时学习的软件里。"></a>5.安装位置，强烈建议除C盘以外的盘，这里我就放在平时学习的软件里。</h5><p><a href="https://imgtu.com/i/bcd7dO"><img src="https://s1.ax1x.com/2022/03/08/bcd7dO.jpg" alt="bcd7dO.jpg"></a></p><h5 id="6-这里需要注意一下，必须安装WinPcap，才能捕获数据包"><a href="#6-这里需要注意一下，必须安装WinPcap，才能捕获数据包" class="headerlink" title="6.这里需要注意一下，必须安装WinPcap，才能捕获数据包"></a>6.这里需要注意一下，必须安装WinPcap，才能捕获数据包</h5><p><a href="https://imgtu.com/i/bcw4hQ"><img src="https://s1.ax1x.com/2022/03/08/bcw4hQ.jpg" alt="bcw4hQ.jpg"></a></p><h5 id="7-USBPcap（-用Wireshark捕获USB数据，可以先不勾选、不进行安装，后续有需要可以再安装）"><a href="#7-USBPcap（-用Wireshark捕获USB数据，可以先不勾选、不进行安装，后续有需要可以再安装）" class="headerlink" title="7.USBPcap（ 用Wireshark捕获USB数据，可以先不勾选、不进行安装，后续有需要可以再安装）"></a>7.USBPcap（ 用Wireshark捕获USB数据，可以先不勾选、不进行安装，后续有需要可以再安装）</h5><p><a href="https://imgtu.com/i/bcwqBV"><img src="https://s1.ax1x.com/2022/03/08/bcwqBV.jpg" alt="bcwqBV.jpg"></a></p><h5 id="8-开始安装"><a href="#8-开始安装" class="headerlink" title="8.开始安装"></a>8.开始安装</h5><p><a href="https://imgtu.com/i/bcwbn0"><img src="https://s1.ax1x.com/2022/03/08/bcwbn0.jpg" alt="bcwbn0.jpg"></a></p><h5 id="9-安装WinPcap"><a href="#9-安装WinPcap" class="headerlink" title="9.安装WinPcap"></a>9.安装WinPcap</h5><p><a href="https://imgtu.com/i/bcwL7T"><img src="https://s1.ax1x.com/2022/03/08/bcwL7T.jpg" alt="bcwL7T.jpg"></a></p><h5 id="10-直接默认安装，不要取消打勾"><a href="#10-直接默认安装，不要取消打勾" class="headerlink" title="10.直接默认安装，不要取消打勾"></a>10.直接默认安装，不要取消打勾</h5><p><a href="https://imgtu.com/i/bcw7Xq"><img src="https://s1.ax1x.com/2022/03/08/bcw7Xq.jpg" alt="bcw7Xq.jpg"></a></p><h5 id="11-等待安装完后，点击Finish"><a href="#11-等待安装完后，点击Finish" class="headerlink" title="11.等待安装完后，点击Finish"></a>11.等待安装完后，点击Finish</h5><p><a href="https://imgtu.com/i/bcwTcn"><img src="https://s1.ax1x.com/2022/03/08/bcwTcn.jpg" alt="bcwTcn.jpg"></a><br><a href="https://imgtu.com/i/bcwXAU"><img src="https://s1.ax1x.com/2022/03/08/bcwXAU.jpg" alt="bcwXAU.jpg"></a></p><h5 id="12-这里注意一下："><a href="#12-这里注意一下：" class="headerlink" title="12.这里注意一下："></a>12.这里注意一下：</h5><p>Reboot now 是：现在重新启动电脑</p><p>I want to manually reboot later 是:我想以后手动重新启动，现不会重启电脑</p><p><a href="https://imgtu.com/i/bcwjNF"><img src="https://s1.ax1x.com/2022/03/08/bcwjNF.jpg" alt="bcwjNF.jpg"></a></p><p>安装完毕！</p><p>这时候可以在右下角搜索栏 wireshark 查看是否真正安装完毕！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;wireshark简介及安装教程&quot;&gt;&lt;a href=&quot;#wireshark简介及安装教程&quot; class=&quot;headerlink&quot; title=&quot;wireshark简介及安装教程&quot;&gt;&lt;/a&gt;wireshark简介及安装教程&lt;/h1&gt;&lt;h2 id=&quot;1-简史&quot;&gt;&lt;a </summary>
+      
+    
+    
+    
+    
+    <category term="wireshark" scheme="http://example.com/tags/wireshark/"/>
+    
+    <category term="安装教程" scheme="http://example.com/tags/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>对数器</title>
